@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+    <style>
+
+.content{
+     margin: 100px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<div class="content">
+    <h1>Students</h1>
+    <table>
+  <tr>
+    <th>Student ID</th>
+    <th>Student Name</th>
+      <th>Level</th>
+      <th>Date of Birth</th>
+      <th>Mobile Number</th>
+      <th>Email</th>
+
+  </tr>
+
+
+      {%for key, student in data.items() %}
+       <tr>
+            <td>{{student[0]}}</td>
+             <td>{{student[1]}}</td>
+             <td>{{student[2]}}</td>
+             <td>{{student[3]}}</td>
+             <td>{{student[4]}}</td>
+             <td>{{student[5]}}</td>
+             </tr>
+           {%endfor%}
+
+        </table>
+
+</div>
+</body>
+</html>

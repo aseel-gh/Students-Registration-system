@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Schedules</title>
+    <style>
+.content{
+     margin: 100px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<div class="content">
+    <h1>Course Schedules</h1>
+    <table>
+    <tr>
+    <th>schedule ID</th>
+    <th>Course ID</th>
+      <th>Day</th>
+      <th>Duration</th>
+      <th>Start Time</th>
+
+  </tr>
+
+        {%for key, schedule in data.items() %}
+        <tr>
+            <td>{{schedule[0]}}</td>
+            <td>{{schedule[1]}}</td>
+            <td>{{schedule[2]}}</td>
+            <td>{{schedule[3]}}</td>
+            <td>{{schedule[4]}}</td>
+             </tr>
+        {%endfor%}
+</table>
+
+</div>
+</body>
+</html>
